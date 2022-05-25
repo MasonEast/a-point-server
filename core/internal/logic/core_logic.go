@@ -2,6 +2,7 @@ package logic
 
 import (
 	"context"
+	"fmt"
 
 	"a-point-server/core/internal/svc"
 	"a-point-server/core/internal/types"
@@ -23,8 +24,7 @@ func NewCoreLogic(ctx context.Context, svcCtx *svc.ServiceContext) *CoreLogic {
 	}
 }
 
-func (l *CoreLogic) Core(req *types.Request) (resp *types.Response, err error) {
-	// todo: add your logic here and delete this line
-
+func (l *CoreLogic) Core(req *types.SendRequest) (resp *types.SendReponse, err error) {
+	fmt.Println(req.Data, "------")
 	return
 }

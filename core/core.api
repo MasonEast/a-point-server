@@ -1,12 +1,12 @@
-type Request {
-	Name string `path:"name,options=you|me"`
+type SendRequest {
+	Data string `json:"data"`
 }
 
-type Response {
+type SendReponse {
 	Message string `json:"message"`
 }
 
 service core-api {
 	@handler CoreHandler
-	get /from/:name(Request) returns (Response)
+	post /send(SendRequest) returns (SendReponse)
 }

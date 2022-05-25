@@ -13,8 +13,8 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 	server.AddRoutes(
 		[]rest.Route{
 			{
-				Method:  http.MethodGet,
-				Path:    "/from/:name",
+				Method:  http.MethodPost,
+				Path:    "/send",
 				Handler: CoreHandler(serverCtx),
 			},
 		},
